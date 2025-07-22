@@ -14,14 +14,14 @@ app.use(cors());
 app.use(express.json());
 
 //Routes
-app.use("/auth",authRoute)
-app.use("/users", userRoute)
-app.use("/parcels",parcelRoute)
+app.use("/api/auth",authRoute)
+app.use("/api/users", userRoute)
+app.use("/api/parcels",parcelRoute)
 
 //DATABAse Connection
 const DB = process.env.DB;
 mongoose.connect(DB).then(()=>{
-    console.log("Databse connection is successful");
+    console.log("Database connection is successful");
 }).catch((err)=>{
     console.log(err)
 })

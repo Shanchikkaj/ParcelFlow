@@ -1,0 +1,10 @@
+# Admin folder
+admin/node_modules/
+
+# Backend
+backend/node_modules/
+backend/.env
+
+# Background services
+backgroundservices/node_modules
+backgroundservices/.env
