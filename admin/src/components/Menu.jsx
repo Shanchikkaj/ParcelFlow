@@ -14,8 +14,8 @@ import {
 import { Link } from "react-router-dom";
 const Menu = () => {
   return (
-    <div className="h-[90vh] shadow-xl bg-[#FF6B00] ">
-      <ul className="flex flex-col items-center justify-center mt-[20px]">
+    <div className="h-[90vh] shadow-xl  ">
+      <ul className="flex flex-col items-center justify-center mt-[20px] bg-[#697e94]">
         <Link to="/">
           <li className="flex items-center text-[#D7D7D7] text-[18px] hover:text-[#4a85e3] cursor-pointer mt-[20px]">
             <FaHome className="mr-[15px]" />

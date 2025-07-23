@@ -9,6 +9,7 @@ const Users = () => {
   const [users, setUsers] = useState([]);
 
   const columns = [
+    { field: "_id", headerName: "ID", width: 90 },
     { field: "fullname", headerName: "Name", width: 150 },
     { field: "email", headerName: "Email", width: 200 },
     { field: "age", headerName: "Age", width: 100 },

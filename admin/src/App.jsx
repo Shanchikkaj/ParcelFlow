@@ -16,12 +16,12 @@ function App() {
       <div className="flex flex-col">
         <Navbar />
 
-        <div className="flex">
-          <div className="w-[20%]">
+        <div className="flex ">
+          <div className="w-[15%] ">
             <Menu />
           </div>
 
-          <div className="w-[80%]">
+          <div className="w-[80%] ">
             <Outlet />
           </div>
         </div>

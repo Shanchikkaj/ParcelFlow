@@ -53,7 +53,11 @@ dotenv.config();
       { expiresIn: "10d" }
     );
 
-    res.status(200).json({ ...info, accessToken });
+    res.status(200).json({
+  token: accessToken,
+  user: info  // includes email, fullname, role, etc.
+});
+
   } catch (error) {
     res.status(500).json(error);
   }

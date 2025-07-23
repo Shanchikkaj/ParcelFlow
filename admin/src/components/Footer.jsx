@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div className="flex items-center bg-[#4a85e3] justify-between h-[100px]">
+    <div className="flex items-center bg-[#697e94] justify-between h-[100px]">
       <img
         src="/logo.png"
         alt=""

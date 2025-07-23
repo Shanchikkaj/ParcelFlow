@@ -65,7 +65,7 @@ const NewUsers = () => {
         <label htmlFor="">Full Name</label>
         <input
           type="text"
-          placeholder="James Doe"
+          placeholder="Abi seger"
           name="fullname"
           value={inputs.fullname || ''}
           onChange={handleChange}
@@ -76,7 +76,7 @@ const NewUsers = () => {
         <label htmlFor="">Email</label>
         <input
           type="text"
-          placeholder="jamesdoe@gmail.com"
+          placeholder="abi@gmail.com"
           name="email"
           value={inputs.email || ''}
           onChange={handleChange}

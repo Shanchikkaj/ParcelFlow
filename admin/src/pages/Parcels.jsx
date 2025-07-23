@@ -12,11 +12,14 @@ const Parcels = () => {
   
 
   const columns = [
+    { field: "_id", headerName: "ID", width: 90 },
     { field: "from", headerName: "From", width: 150 },
     { field: "to", headerName: "To", width: 150 },
     { field: "sendername", headerName: "Sender", width: 150 },
     { field: "recipientname", headerName: "Recipient", width: 150 },
+    { field: "cost", headerName: "Cost ($)", width: 130 },
     { field: "note", headerName: "Note", width: 200 },
+    
     {
       field: "edit",
       headerName: "Edit",
@@ -69,7 +72,7 @@ const handleDelete = async(id) =>{
 }
 
   return (
-    <div className="m-[30px]  p-[20px] bg-[#778ea7]">
+    <div className="m-[30px]  p-[20px] bg-[white]">
       <div className="flex items-center justify-between ">
         <h1 className="m-[20px] text-[20px]">All Parcels</h1>
 

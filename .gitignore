@@ -8,3 +8,5 @@ backend/.env
 # Background services
 backgroundservices/node_modules
 backgroundservices/.env
+
+frontend/node_modules

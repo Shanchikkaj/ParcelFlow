@@ -39,7 +39,7 @@ const NewParcel = () => {
             <label htmlFor="">From</label>
             <input
               type="text"
-              placeholder="Antorio, USA"
+              placeholder="Batticaloa, SriLanka"
               name="from"
               value={inputs.from || ""}
               onChange={handleChange}
@@ -50,7 +50,7 @@ const NewParcel = () => {
             <label htmlFor="">To</label>
             <input
               type="text"
-              placeholder="Saint Mary, USA"
+              placeholder="Sydney, Australia"
               name="to"
               value={inputs.to || ""}
               onChange={handleChange}
@@ -61,7 +61,7 @@ const NewParcel = () => {
             <label htmlFor="">Sender Name</label>
             <input
               type="text"
-              placeholder="James Doe"
+              placeholder="Shana jega"
               name="sendername"
               value={inputs.sendername || ""}
               onChange={handleChange}
@@ -72,7 +72,7 @@ const NewParcel = () => {
             <label htmlFor="">Recipient Name</label>
             <input
               type="text"
-              placeholder="James Doe"
+              placeholder="Abi seger"
               name="recipientname"
               value={inputs.recipientname || ""}
               onChange={handleChange}
@@ -84,7 +84,7 @@ const NewParcel = () => {
             <input
               type="email"
               required
-              placeholder="jamesdoe@gmail.com"
+              placeholder="shana@gmail.com"
               name="senderemail"
               value={inputs.senderemail || ""}
               onChange={handleChange}
@@ -95,7 +95,7 @@ const NewParcel = () => {
             <label htmlFor="">Recipient Email</label>
             <input
               type="email"
-              placeholder="jamesdoe@gmail.com"
+              placeholder="abi@gmail.com"
               name="recipientemail"
               value={inputs.recipientemail || ""}
               onChange={handleChange}

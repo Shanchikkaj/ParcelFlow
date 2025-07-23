@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-     <div className="flex items-center bg-[#4a85e3] justify-between h-[70px] pl-10">
+     <div className="flex items-center justify-between h-[70px] pl-10 bg-[#697e94] ">
       <img
         src="/logo.png"
         alt=""
-        height={150}
-        width={130}
+        height={200}
+        width={90}
         className="text-white"
       />
 
