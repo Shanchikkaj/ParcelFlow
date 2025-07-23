@@ -27,11 +27,13 @@ const Login = () => {
       localStorage.setItem("token", token);
       localStorage.setItem("role", user.role);
 
+console.log("Token saved:", localStorage.getItem("token"));
+
       // Redirect based on role
       if (user.role === "admin") {
-        navigate("/");
+        navigate("/home");
       } else {
-        navigate("/"); 
+        navigate("/home"); 
       }
     } catch (err) {
       setError("Login failed. Please check your credentials.");

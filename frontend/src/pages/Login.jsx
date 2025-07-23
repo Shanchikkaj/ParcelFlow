@@ -1,5 +1,5 @@
-import { Navigate} from "react-router-dom";
 import { useState } from "react";
+import { Navigate} from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
@@ -23,16 +23,19 @@ const Login = () => {
   const handleLogin = async () => {
     if (email && password) {
       try {
-        setLoading(true);
+        setLoading(true)
         await login(dispatch, { email, password });
-        setLoading(false); // Navigate on successful login
+         setLoading(false)
       } catch (error) {
-        setLoading(false);
-
+     
+          console.log(error)
+          setLoading(false)
         // Handle login error (e.g., display an error message)
       }
     }
   };
+      
+  console.log(user.currentUser );
 
   
   
@@ -46,14 +49,14 @@ const Login = () => {
             type="text"
             className="flex items-center justify-center bg-[#fff] p-[20px] w-[350px] m-[10%] outline-none"
             placeholder="Enter your email"
-            onChange={(e) => setEmail(e.target.value.replace(/\s/g, ''))}
+            onChange={(e) => setEmail(e.target.value)}
           />
          <div className="flex items-center">
          <input
             type={showPassword ? "text" : "password"}
             className="flex items-center justify-center bg-[#fff] p-[20px] w-[350px] ml-[10%] outline-none"
             placeholder="Enter your password"
-            onChange={(e) => setPassword(e.target.value.replace(/\s/g, ''))}
+            onChange={(e) => setPassword(e.target.value)}
           />
            <span
             style={{
@@ -69,10 +72,10 @@ const Login = () => {
 
          <button className="bg-[#1E1E1E] w-[350px] p-[15px] text-white font-semibold text-[18px] m-[10%]" onClick={handleLogin} >
             {loading ? "loading ..." : "Login"}
-            {user.currentUser ? <Navigate to="/myparcels" /> : ""}
+            {user.currentUser && <Navigate to="/myparcels" /> }
           </button>
           
-       {error && <span style={{color:'red'}}>Please ensure that your staff ID and password are entered correctly before attempting to log in. Double-check your credentials and try again.</span>}
+       {error && <span className="text-red-500">Please ensure that your staff ID and password are entered correctly before attempting to log in. Double-check your credentials and try again.</span>}
         </div>
       </div>
       <Footer />

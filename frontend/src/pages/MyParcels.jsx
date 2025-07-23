@@ -6,26 +6,32 @@ import { publicRequest } from "../requestMethods";
 import { useDispatch } from "react-redux";
 import { logOut } from "../redux/userRedux";
 
-const MyParcels = () => {
-  const [open, setOpen] = useState(false);
+
+  
+
+  const MyParcels =() =>{
+    const [open, setOpen] = useState(false);
   const [data, setData] = useState([]);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+    
   useEffect(() => {
+     
     const getParcels = async () => {
       try {
         const res = await publicRequest.post("/parcels/me", {
           email: user.currentUser.email,
         });
+        console.log("Response from backend /parcels/me:", res.data);
         setData(res.data);
       } catch (error) {
-        console.log(error);
+        console.log("Error fetching parcels:",error);
       }
     };
     getParcels();
   }, []);
+  console.log(data);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -99,5 +105,6 @@ const MyParcels = () => {
     </div>
   );
 };
+
 
 export default MyParcels;
